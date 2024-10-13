@@ -3,7 +3,25 @@ document.getElementById("colorInput").addEventListener("keydown", doNothing);
 
 function changeBackgroundColor()
 {
-    document.body.style.background = document.getElementById("colorInput").value;
+    try
+    {
+        if (document.getElementById("colorInput").value == "")
+        {
+            throw "Enter a color!"
+        }
+
+        else if (!CSS.supports("background", document.getElementById("colorInput").value))
+        {
+            throw "Enter a valid color!"
+        }
+  
+        document.body.style.background = document.getElementById("colorInput").value;
+    }
+
+    catch (err)
+    {
+        alert(err);
+    }
 }
 
 function doNothing(event)
