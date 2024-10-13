@@ -35,7 +35,7 @@
             <img id="grid1-img" alt="Aapo Kiiskilä" src="assets\images\pictureOfMe.png">
         </section>
 
-        <div id="flex-container1">
+        <div id="info-container">
             <section id="education">
                 <h2 id="educationHeading">Education</h2>
                 <ul id="educationList">
@@ -68,9 +68,45 @@
             </section>
         </div>
 
+        <section id="skills">
+            <h2 id="skillsHeading">Skills</h2>
+            <table id="skillsTable">
+                <tr>
+                    <th>Skill</th>
+                    <td id="skillsC">C</td>
+                    <td id="skillsCPlusPlus">C++</td>
+                    <td id="skillsPython">Python</td>
+                    <td id="skillsJava">Java</td>
+                    <td id="skillsJavaScript">JavaScript</td>
+                    <td id="skillsHTML">HTML</td>
+                    <td id="skillsCSS">CSS</td>
+                </tr>
+                <tr>
+                    <th>Knowledge</th>
+                    <td>Basics</td>
+                    <td>Basics</td>
+                    <td>Basics</td>
+                    <td>Basics</td>
+                    <td>Basics</td>
+                    <td>Basics</td>
+                    <td>Basics</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="colorChange">
+            <h2 id="colorChangeHeading">Change the background color</h2>
+            <form id="colorChangeForm">
+                <label for="colorInput" id="colorLabel">Enter a color:</label><br>
+                <input type="text" id="colorInput" name="colorInput" placeholder="yellow">
+                <input type="button" id="colorButton" value="Change">
+            </form>
+        </section>
+
     </main>
 
     <script src="assets/javascript/timerAlert.js"></script>
+    <script src="assets\javascript\colorChange.js"></script>
 
 </body>
 
