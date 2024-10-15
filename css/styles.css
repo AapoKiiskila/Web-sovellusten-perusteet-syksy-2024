@@ -257,6 +257,7 @@ body {
     border-style: solid;
     border-color: black;
     padding-top: 25px;
+    scroll-margin: 100px;
 }
 
 #projectsHeading {
@@ -288,14 +289,38 @@ body {
     display: inline-block;
     width: 100px;
     height: 40px;
+    font-weight: bold;
 }
 
 #previousButton {
     display: inline-block;
     width: 100px;
     height: 40px;
+    font-weight: bold;
 }
 
 #nextButton:hover, #previousButton:hover {
     background-color: #c5c2c2;
+}
+
+#projects-GitHub {
+    width: 200px;
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    float: left;
+    margin-left: 25px;
+    background-color: lightgray;
+    border-radius: 25px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#linkGitHub {
+    color: black;
+}
+
+#linkGitHub:hover {
+    background-color: rgb(156, 156, 156);
 }
