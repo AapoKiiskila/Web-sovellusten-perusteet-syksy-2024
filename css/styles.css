@@ -363,3 +363,8 @@ body {
 #foodInput {
     font-size: 20px;
 }
+
+#sortFoodsButton {
+    margin-top: 10px;
+    font-size: 20px;
+}

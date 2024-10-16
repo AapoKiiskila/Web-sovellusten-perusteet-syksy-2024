@@ -1,11 +1,11 @@
 document.getElementById("foodInput").addEventListener("keyup", filterFoods);
-
+document.getElementById("sortFoodsButton").addEventListener("click", sortFoods);
 
 function filterFoods()
 {
     const filter = document.getElementById("foodInput").value.toLowerCase();
     const listOfFoods = document.getElementById("foodList");
-    const foods = listOfFoods.querySelectorAll("#foodList li");
+    const foods = listOfFoods.querySelectorAll("li");
 
     for (let i = 0; i <= foods.length; i++)
     {
@@ -20,6 +20,25 @@ function filterFoods()
         {
             foods[i].style.display = "none";
         }
+    }
+}
+
+function sortFoods()
+{
+    const foodArray = [];
+    const listOfFoods = document.getElementById("foodList");
+    const foods = listOfFoods.querySelectorAll("li");
+
+    for (let i = 0; i < foods.length; i++)
+    {
+        foodArray.push(foods[i].innerHTML);
+    }
+
+    foodArray.sort();
+
+    for (let i = 0; i < foods.length; i++)
+    {
+        foods[i].innerHTML = foodArray[i];
     }
 }
 
