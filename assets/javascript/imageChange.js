@@ -1,5 +1,5 @@
-document.getElementById("nextButton").addEventListener("click", nextImage );
-document.getElementById("previousButton").addEventListener("click", previousImage );
+document.getElementById("nextButton").addEventListener("click", nextImage);
+document.getElementById("previousButton").addEventListener("click", previousImage);
 
 const images = ["assets/images/bank-image1.png", "assets/images/bank-image2.jpg"];
 let index = 0;
