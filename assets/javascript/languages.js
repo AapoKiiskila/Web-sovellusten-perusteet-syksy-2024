@@ -9,10 +9,15 @@ class Language
 
 const languages = [new Language("Finnish", "Native"), new Language("English", "Fluent"), new Language("Swedish", "Basics")];
 
-for (let i = 0; i < languages.length; i++)
+function displayLanguages()
 {
-    const object = languages[i];
-    const li = document.createElement("li");
-    li.innerText = object.language + " - " + object.level;
-    document.getElementById("languagesList").appendChild(li);
+    for (let i = 0; i < languages.length; i++)
+    {
+        const object = languages[i];
+        const li = document.createElement("li");
+        li.innerText = object.language + " - " + object.level;
+        document.getElementById("languagesList").appendChild(li);
+    }
 }
+
+displayLanguages();
