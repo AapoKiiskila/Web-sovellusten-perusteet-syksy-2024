@@ -1,13 +1,13 @@
 document.getElementById("foodInput").addEventListener("keyup", filterFoods);
 document.getElementById("sortFoodsButton").addEventListener("click", sortFoods);
+document.getElementById("fetchFoodsButton").addEventListener("click", fetchRandomFood);
 
 function filterFoods()
 {
     const filter = document.getElementById("foodInput").value.toLowerCase();
-    const listOfFoods = document.getElementById("foodList");
-    const foods = listOfFoods.querySelectorAll("li");
+    const foods = document.querySelectorAll("#foodList li");
 
-    for (let i = 0; i <= foods.length; i++)
+    for (let i = 0; i < foods.length; i++)
     {
         const nameOfFood = foods[i].innerText.toLowerCase();
 
@@ -26,25 +26,31 @@ function filterFoods()
 function sortFoods()
 {
     const foodArray = [];
-    const listOfFoods = document.getElementById("foodList");
-    const foods = listOfFoods.querySelectorAll("li");
+    const foods = document.querySelectorAll("#foodList li");
 
     for (let i = 0; i < foods.length; i++)
     {
-        foodArray.push(foods[i].innerHTML);
+        foodArray.push(foods[i].innerText);
     }
 
     foodArray.sort();
 
     for (let i = 0; i < foods.length; i++)
     {
-        foods[i].innerHTML = foodArray[i];
+        foods[i].innerText = foodArray[i];
     }
 }
 
 async function fetchRandomFood()
 {
-    for (let i = 1; i <= 15; i++)
+    const foodlist = document.getElementById("foodList");
+
+    while (foodlist.hasChildNodes())
+    {
+        foodlist.removeChild(foodlist.firstChild)
+    }
+
+    for (let i = 0; i < 15; i++)
     {    
         try
         {
@@ -54,14 +60,13 @@ async function fetchRandomFood()
             const listItem = document.createElement("li");
             listItem.innerText = data.meals[0].strMeal;
 
-            document.getElementById("foodList").appendChild(listItem);
+            foodlist.appendChild(listItem);
         }
 
         catch (error)
         {
             alert(error);
+            break;
         }
     }
 }
-
-fetchRandomFood();

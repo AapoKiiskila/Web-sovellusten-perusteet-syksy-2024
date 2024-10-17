@@ -351,13 +351,18 @@ body {
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
-    margin-top: 0;
+    margin-top: -5px;
 }
 
 #foodList {
     font-size: 20px;
     line-height: 1.5;
-    margin-top: 0;
+    margin-top: 5px;
+}
+
+#fetchFoodsButton {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 #foodInput {
