@@ -1,6 +1,48 @@
+document.getElementById("fetchFoodsButton").addEventListener("click", fetchRandomFood);
 document.getElementById("foodInput").addEventListener("keyup", filterFoods);
 document.getElementById("sortFoodsButton").addEventListener("click", sortFoods);
-document.getElementById("fetchFoodsButton").addEventListener("click", fetchRandomFood);
+
+let running = false;
+
+
+async function fetchRandomFood()
+{
+    const foodlist = document.getElementById("foodList");
+
+    if (running)
+    {
+        return;
+    }
+
+    running = true;
+
+    while (foodlist.hasChildNodes())
+    {
+        foodlist.removeChild(foodlist.firstChild)
+    }
+
+    for (let i = 0; i < 15; i++)
+    {    
+        try
+        {
+            const response = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
+            const data = await response.json();
+            
+            const listItem = document.createElement("li");
+            listItem.innerText = data.meals[0].strMeal;
+
+            foodlist.appendChild(listItem);
+        }
+
+        catch (error)
+        {
+            alert(error);
+            break;
+        }
+    }
+
+    running = false;
+}
 
 function filterFoods()
 {
@@ -38,35 +80,5 @@ function sortFoods()
     for (let i = 0; i < foods.length; i++)
     {
         foods[i].innerText = foodArray[i];
-    }
-}
-
-async function fetchRandomFood()
-{
-    const foodlist = document.getElementById("foodList");
-
-    while (foodlist.hasChildNodes())
-    {
-        foodlist.removeChild(foodlist.firstChild)
-    }
-
-    for (let i = 0; i < 15; i++)
-    {    
-        try
-        {
-            const response = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
-            const data = await response.json();
-            
-            const listItem = document.createElement("li");
-            listItem.innerText = data.meals[0].strMeal;
-
-            foodlist.appendChild(listItem);
-        }
-
-        catch (error)
-        {
-            alert(error);
-            break;
-        }
     }
 }
