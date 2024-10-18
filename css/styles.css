@@ -144,7 +144,9 @@ body {
     margin-left: 375px;
     margin-right: 375px;
     border-radius: 25px;
-    border: 1px solid black;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
     scroll-margin-top: 150px;
 }
 
@@ -209,7 +211,9 @@ body {
     margin-left: 600px;
     margin-right: 600px;
     border-radius: 25px;
-    border: 1px solid black;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
 }
 
 #colorChangeHeading {
@@ -288,14 +292,12 @@ body {
 }
 
 #nextButton {
-    display: inline-block;
     width: 100px;
     height: 40px;
     font-weight: bold;
 }
 
 #previousButton {
-    display: inline-block;
     width: 100px;
     height: 40px;
     font-weight: bold;
@@ -390,4 +392,8 @@ body {
 #footerText {
     color: white;
     font-size: 24px;
+}
+
+h1, h2, p {
+    font-family: "Times New Roman", Verdana;
 }
