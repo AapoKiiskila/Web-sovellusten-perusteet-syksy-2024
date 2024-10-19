@@ -56,3 +56,75 @@ Line: 9, 12-13, 38, 40, 57-58, 64-65, 71-72, 79-80, 91, 96-97, 243, 245, 317, 33
 Not implemented<br/>
 
 ## JavaScript Basics (25%)
+
+**(1/5) Simple interactions (like alerts on button click):**
+
+File: colorChange.js<br/>
+Line: 1, 4-25<br/>
+
+File: imageChange.js<br/>
+Line: 1-31
+
+**(2/5) Multiple event listeners and basic DOM manipulations:**
+
+File: colorChange.js<br/>
+Line: 1-2, 18<br/>
+
+File: imageChange.js<br/>
+Line: 1-2, 18, 30
+
+**(3/5) Use of arrays, objects, and functions:**
+
+File: languages.js<br/>
+Line: 10, 12<br/>
+
+File: colorChange.js<br/>
+Line: 4, 27<br/>
+
+File: imageChange.js<br/>
+Line: 4, 9, 21<br/>
+
+File: timers.js<br/>
+Line: 4, 9<br/>
+
+File: randomFoodFetch.js<br/>
+Line: 8, 47, 68, 70
+
+**(4/5) Advanced logic, looping through data, and dynamic DOM updates:**
+
+File: randomFoodFetch.js<br/>
+Line: 8-45, 47-66, 68-84
+
+**(5/5) Consistent use of Object-Oriented JavaScript principles:**
+
+Not implemented.
+
+## Asynchronous Operations (25%)
+
+**(1/5) Use of timers:**
+
+File: timers.js<br/>
+Line: 1-2
+
+**(2/5) Successful implementation of an AJAX call or Fetch.**
+
+File: randomFoodFetch.js<br/>
+Line: 28
+
+**(3/5) Data from the asynchronous call is displayed on the webpage:**
+
+File: randomFoodFetch.js<br/>
+Line: 34
+
+**(4/5) Error handling is implemented (for failed API calls, etc.):**
+
+File: randomFoodFetch.js<br/>
+Line: 26, 37<br/>
+
+File: colorChange.js<br/>
+Line: 6, 21
+
+**(5/5) Effective use of asynchronous data to enhance user experience (like filtering, sorting):**
+
+File: randomFoodFetch.js<br/>
+Line: 8, 28-29, 47-66, 68-84
