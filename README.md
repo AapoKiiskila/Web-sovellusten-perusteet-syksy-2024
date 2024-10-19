@@ -1,5 +1,9 @@
 # Web-page
 
+## Link
+
+https://aapokiiskila.github.io/Web-sovellusten-perusteet-syksy-2024/
+
 ## HTML (25%)
 
 **(1/5) Basic HTML structure is present:**
