@@ -64,10 +64,14 @@ Not implemented<br/>
 **(1/5) Simple interactions (like alerts on button click):**
 
 File: colorChange.js<br/>
-Line: 1, 4-25<br/>
+Line:
+- (1) An event handler for a button.
+- (4-25) Background color can be changed by clicking the button. The color will be changed to what is typed in the text input field. An alert pops up if the text input field is empty or if the entered color does not exist.
 
 File: imageChange.js<br/>
-Line: 1-31
+Line:
+- (1-2) Event handlers for two buttons.
+- (4-31) "Next" and "Previous" buttons to cycle through images. 
 
 **(2/5) Multiple event listeners and basic DOM manipulations:**
 
@@ -97,7 +101,10 @@ Line: 8, 47, 68, 70
 **(4/5) Advanced logic, looping through data, and dynamic DOM updates:**
 
 File: randomFoodFetch.js<br/>
-Line: 8-45, 47-66, 68-84
+Line:
+- 12, 56, 61 (Advanced logic)
+- 52, 73, 80 (Looping through data)
+- 21, 34, 58, 63, 82 (Dynamic DOM updates)
 
 **(5/5) Consistent use of Object-Oriented JavaScript principles:**
 
@@ -131,4 +138,4 @@ Line: 6, 21
 **(5/5) Effective use of asynchronous data to enhance user experience (like filtering, sorting):**
 
 File: randomFoodFetch.js<br/>
-Line: 8, 28-29, 47-66, 68-84
+Line: 8-45 47-66, 68-84
